@@ -1,0 +1,7 @@
+C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioDoce\bin\Debug\EjercicioDoce.exe.config
+C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioDoce\bin\Debug\EjercicioDoce.exe
+C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioDoce\bin\Debug\EjercicioDoce.pdb
+C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioDoce\obj\Debug\EjercicioDoce.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioDoce\obj\Debug\EjercicioDoce.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioDoce\obj\Debug\EjercicioDoce.exe
+C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioDoce\obj\Debug\EjercicioDoce.pdb
