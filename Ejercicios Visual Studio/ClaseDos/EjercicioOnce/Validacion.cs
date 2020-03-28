@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace EjercicioOnce
-{
+{  
    public class Validacion //Colocar public siempre en CLASES
     {
 
