@@ -1,0 +1,7 @@
+C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioOcho\bin\Debug\EjercicioOcho.exe.config
+C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioOcho\bin\Debug\EjercicioOcho.exe
+C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioOcho\bin\Debug\EjercicioOcho.pdb
+C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioOcho\obj\Debug\EjercicioOcho.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioOcho\obj\Debug\EjercicioOcho.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioOcho\obj\Debug\EjercicioOcho.exe
+C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioOcho\obj\Debug\EjercicioOcho.pdb
