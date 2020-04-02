@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_16
 {
-    class Alumno
+    public class Alumno
     {
         private byte nota1;
         private byte nota2;
