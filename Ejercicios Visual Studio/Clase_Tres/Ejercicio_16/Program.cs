@@ -35,29 +35,51 @@ namespace Ejercicio_16
 
             alumno3.legajo = 789;
             alumno3.nombre = "Pablo";
-            alumno3.apellido = "Guevara";          
+            alumno3.apellido = "Guevara";
+            #endregion
+
+            #region Variables
+            //Notas Alumno 1
+            byte notaAlum1;
+            byte notaDosAlum1;
+
+            //Notas Alumno 2
+            byte notaAlum2;
+            byte notaDosAlum2;
+
+            //Nota Alumno 3
+            byte notaAlum3;
+            byte notaDosAlum3;
             #endregion
 
 
-           //int cantAlumn =0;
-
             Console.Write("Ingrese Nota 1 para el alumno1: ");
-            byte notaAlum1 = byte.Parse(Console.ReadLine());
+            notaAlum1 = byte.Parse(Console.ReadLine());
             Console.Write("Ingrese Nota 2 para el alumno1: ");
-            byte notaDosAlum1 = byte.Parse(Console.ReadLine());
+            notaDosAlum1 = byte.Parse(Console.ReadLine());
 
             alumno1.Estudiar(notaAlum1, notaDosAlum1);
-            Console.WriteLine(alumno1.Mostrar());
+            
 
             Console.Write("Ingrese Nota 1 para el alumno2: ");
-            byte notaAlum2 = byte.Parse(Console.ReadLine());
+            notaAlum2 = byte.Parse(Console.ReadLine());
             Console.Write("Ingrese Nota 2 para el alumno2: ");
-            byte notaDosAlum2 = byte.Parse(Console.ReadLine());
+            notaDosAlum2 = byte.Parse(Console.ReadLine());
 
             alumno2.Estudiar(notaAlum2, notaDosAlum2);
-            Console.WriteLine(alumno2.Mostrar());
 
-            
+            Console.Write("Ingrese Nota 1 para el alumno3: ");
+            notaAlum3 = byte.Parse(Console.ReadLine());
+            Console.Write("Ingrese Nota 2 para el alumno3: ");
+            notaDosAlum3 = byte.Parse(Console.ReadLine());
+
+            alumno3.Estudiar(notaAlum3, notaDosAlum3);
+
+            Console.WriteLine(alumno1.Mostrar());
+            Console.WriteLine(alumno2.Mostrar());
+            Console.WriteLine(alumno3.Mostrar());
+
+
 
 
         }

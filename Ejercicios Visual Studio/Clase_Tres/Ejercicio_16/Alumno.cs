@@ -47,11 +47,11 @@ namespace Ejercicio_16
             string muestra = null;
             if (this.notafinal != -1)
             {
-                muestra = "Alumno: " + this.nombre + "Nota 1: " + this.nota1 + "Nota 2: " + this.nota2 + "Nota final: " + this.notafinal;
+                muestra = "\n--------------------\nLegajo: "+this.legajo+ "\nNombre: " + this.nombre+ "\nApellido: "+this.apellido+"\nNota 1: "+this.nota1+"\nNota 2: " +this.nota2+"\nNota final: " +this.notafinal;
 
             }
             else
-                muestra = "Desaprobado";
+                muestra = "\nDesaprobado";
 
             
             return muestra;
