@@ -44,17 +44,32 @@ namespace Ejercicio_16
             /*d.El método Mostrar, expondrá en la consola todos los datos de los alumnos. La nota final se
                 mostrará sólo si es distinto de -1, caso contrario se mostrará la leyenda "Alumno
                 desaprobado".*/
-            string muestra = null;
+
+            StringBuilder muestra = new StringBuilder();
+            string resultado = null;
+
             if (this.notafinal != -1)
             {
-                muestra = "\n--------------------\nLegajo: "+this.legajo+ "\nNombre: " + this.nombre+ "\nApellido: "+this.apellido+"\nNota 1: "+this.nota1+"\nNota 2: " +this.nota2+"\nNota final: " +this.notafinal;
+
+                muestra.AppendLine("Legajo: " + this.legajo);
+                muestra.AppendLine("Nombre: " + this.nombre);
+                muestra.AppendLine("Apellido: " + this.apellido);
+                muestra.AppendLine("Nota Uno: " + this.nota1);
+                muestra.AppendLine("Nota Dos: " + this.nota2);
+                muestra.AppendLine("Nota Final: " + this.notafinal);
+                resultado = muestra.ToString();
 
             }
             else
-                muestra = "\nDesaprobado";
+            {
+                muestra.AppendLine("Desaprobado!");
+                resultado = muestra.ToString();
 
-            
-            return muestra;
+            }
+
+
+
+            return resultado;
         }
 
 
