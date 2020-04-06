@@ -39,7 +39,7 @@ namespace EjercicioQuince
                 Console.WriteLine("Division: / ");
                 Console.Write("Que operacion desea realizar: ");
                 char operacion = char.Parse(Console.ReadLine());
-                Calculadora.Calcular(numeroA, numeroB, operacion);
+                Console.WriteLine("El resultado de la operacion es: " + Calculadora.Calcular(numeroA, numeroB, operacion));
                 Console.Write("Desea continuar?(S/N) ");
                 caracter = char.Parse(Console.ReadLine());
 
