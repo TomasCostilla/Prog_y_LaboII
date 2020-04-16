@@ -40,7 +40,6 @@ namespace Entidades
             {
                 return this.partidosJugados;
             }
-
         }
 
         public int TotalGoles
@@ -111,12 +110,16 @@ namespace Entidades
         public string MostrarDatos()
         {
             StringBuilder texto = new StringBuilder();
-            texto.AppendLine("Dni: "+this.dni);
-            texto.AppendLine("Nombre: " + this.nombre);
-            texto.AppendLine("Partidos Jugados: " + this.partidosJugados);
+            //texto.AppendLine("Dni: "+this.dni);
+            texto.AppendLine("Dni: " + PropDni);
+            //texto.AppendLine("Nombre: " + this.nombre);
+            texto.AppendLine("Nombre: " + PropNom);
+            //texto.AppendLine("Partidos Jugados: " + this.partidosJugados);
+            texto.AppendLine("Partidos Jugados: " + partidosJug);
             //texto.AppendLine("Promedio de Goles: " + this.GetPromedioGoles());
-            texto.AppendLine("Promedio de Goles: " + PromedioG); 
-            texto.AppendLine("Total de Goles: " + this.totalGoles);
+            texto.AppendLine("Promedio de Goles: " + PromedioG);
+            //texto.AppendLine("Total de Goles: " + this.totalGoles);
+            texto.AppendLine("Total de Goles: " + TotalGoles);
             return texto.ToString();
         }
 
