@@ -12,10 +12,9 @@ namespace Clase_7
         static void Main(string[] args)
         {
 
-            Equipo Equip1 = new Equipo(10, "boca");
-            Jugador jug1 = new Jugador(123, "Tomas");
+            Equipo Equip1 = new Equipo(10, "Boca");
+            Jugador jug1 = new Jugador(123, "Carlos");
             Jugador jug2 = new Jugador(234, "pepe", 10, 2);
-            Jugador jug3 = new Jugador(234, "pepe", 20, 3);
 
 
 

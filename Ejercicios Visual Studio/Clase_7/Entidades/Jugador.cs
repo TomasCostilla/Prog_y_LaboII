@@ -114,8 +114,8 @@ namespace Entidades
             texto.AppendLine("Dni: "+this.dni);
             texto.AppendLine("Nombre: " + this.nombre);
             texto.AppendLine("Partidos Jugados: " + this.partidosJugados);
-            //   texto.AppendLine("Promedio de Goles: " + this.GetPromedioGoles());
-            texto.AppendLine("Promedio de Goles: " + PromedioG);
+            //texto.AppendLine("Promedio de Goles: " + this.GetPromedioGoles());
+            texto.AppendLine("Promedio de Goles: " + PromedioG); 
             texto.AppendLine("Total de Goles: " + this.totalGoles);
             return texto.ToString();
         }
