@@ -19,10 +19,10 @@ namespace Clase_7
 
 
 
-            //Console.WriteLine("jugador: "+jug1.MostrarDatos());
-            //Console.WriteLine("jugador: " + jug2.MostrarDatos());
+            Console.WriteLine("jugador: "+jug1.MostrarDatos());
+            Console.WriteLine("jugador: " + jug2.MostrarDatos());
 
-            if (Equip1 + jug1==false)
+          /*  if (Equip1 + jug1==false)
             {
                 Console.WriteLine("agrego: {0}", jug1.MostrarDatos());
             }
@@ -33,7 +33,7 @@ namespace Clase_7
             if (jug2==jug3)
             {
                 Console.WriteLine("igual DNI");
-            }
+            }*/
 
 
         }
