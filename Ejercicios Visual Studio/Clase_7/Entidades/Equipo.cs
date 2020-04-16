@@ -27,17 +27,20 @@ namespace Entidades
         {
             bool ContieneJugador = false;
             
-            foreach (Jugador aux in e.jugadores)
+           if(e.jugadores.Count < e.cantidadDeJugadores)
             {
-                if(j==aux)
+                foreach (Jugador item in e.jugadores)
                 {
-                    //e.jugadores.Add(j);
-                    ContieneJugador = true;
+                    if (j == item)
+                    {
+                        //Tiene el jugador
+                        ContieneJugador = true;
+                    }
+                    else
+                        e.jugadores.Add(j);
                 }
-                else if(ContieneJugador && e.jugadores.Count < e.cantidadDeJugadores)
-                {
-                    e.jugadores.Add(j);
-                }
+
+
             }
 
             //if(!e.jugadores.Contains(j) && e.jugadores.Count < e.cantidadDeJugadores)

@@ -36,14 +36,19 @@ namespace Entidades
 
         public float GetPromedioGoles()
         {
-            float resultado = 0;
-            resultado = this.totalGoles / this.partidosJugados;
-            return resultado;
+            if(this.partidosJugados==0)
+            {
+                this.promedioGoles = 0;
+            }
+            else
+                this.promedioGoles = this.totalGoles / this.partidosJugados
+;
+            return this.promedioGoles;
         }
         public string MostrarDatos()
         {
             StringBuilder texto = new StringBuilder();
-            texto.AppendLine("Dni: " + this.dni);
+            texto.AppendLine("Dni: "+this.dni);
             texto.AppendLine("Nombre: " + this.nombre);
             texto.AppendLine("Partidos Jugados: " + this.partidosJugados);
             texto.AppendLine("Promedio de Goles: " + this.GetPromedioGoles());
