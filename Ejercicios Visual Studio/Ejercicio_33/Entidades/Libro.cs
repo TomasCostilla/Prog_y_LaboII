@@ -26,7 +26,7 @@ namespace Entidades
             }
             set 
             {
-                //this.paginas = value; 
+                 
             }
         }
 
