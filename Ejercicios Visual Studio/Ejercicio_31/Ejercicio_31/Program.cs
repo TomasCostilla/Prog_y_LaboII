@@ -12,7 +12,8 @@ namespace Ejercicio_31
         static void Main(string[] args)
         {
 
-
+            Console.WriteLine("Ejemplo");
+            Console.WriteLine("Ejemplo");
 
         }
     }
