@@ -36,6 +36,11 @@ namespace Entidades
             this.numeroActual = 0;
         }
 
+        public PuestoAtencion(Puesto puesto)
+        {
+
+        }
+
 
     }
 }
