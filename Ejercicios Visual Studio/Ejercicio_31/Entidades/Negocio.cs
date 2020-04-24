@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Negocio
     {
-        private PuestoAtencion caja;
+        private PuestoAtencion.Puesto caja;
         private Queue<Cliente> clientes;
         private string nombre;
 
@@ -26,6 +26,7 @@ namespace Entidades
         private Negocio()
         {
             this.clientes = new Queue<Cliente>();
+            this.caja = PuestoAtencion.Puesto.Caja1;
             this.nombre = "";
         }
         public Negocio(string nombre)

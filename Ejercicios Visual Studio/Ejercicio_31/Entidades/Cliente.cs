@@ -56,7 +56,7 @@ namespace Entidades
         }
         public static bool operator ==(Cliente c1, Cliente c2)
         {
-            return c1 == c2;
+            return c1.numero == c2.numero;
         }
         #endregion
 

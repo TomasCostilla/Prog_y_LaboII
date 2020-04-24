@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Entidades
@@ -13,27 +14,30 @@ namespace Entidades
             Caja1,Caja2
         }
 
-        private int numeroActual;
+        private static int numeroActual;
         private Puesto puesto;
 
         #region Propiedades
-        public int NumeroActual 
+        public static int NumeroActual 
         {
             get
             {
-                return this.numeroActual;
+                PuestoAtencion.numeroActual += 1;
+                return PuestoAtencion.numeroActual;
+                //return this.numeroActual;
             }
         }
         #endregion
 
         public bool Atender(Cliente cli)
         {
+            Thread.Sleep(10000);
             return true;
         }
 
         private PuestoAtencion()
         {
-            this.numeroActual = 0;
+            PuestoAtencion.numeroActual = 0;
         }
 
         public PuestoAtencion(Puesto puesto)
