@@ -16,7 +16,11 @@ namespace Entidades
         {
             this.competidores = new List<AutoF1>();
         }
-
+        public Competencia(short cantidadvueltas, short cantidadCompetidores)
+        {
+            this.cantidadVueltas = cantidadvueltas;
+            this.cantidadCompetidores = cantidadCompetidores;
+        }
 
 
 
