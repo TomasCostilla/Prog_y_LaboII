@@ -14,12 +14,14 @@ namespace Entidades
         private short numero;
         private short vueltasRestantes;
 
-        public short Combustible 
+
+        #region Propiedades
+        public short Combustible
         {
             get
             {
                 return this.cantidadCombustible;
-            } 
+            }
             set
             {
                 this.cantidadCombustible = value;
@@ -30,7 +32,7 @@ namespace Entidades
             get
             {
                 return this.enCompetencia;
-            }           
+            }
             set
             {
                 this.enCompetencia = value;
@@ -48,14 +50,22 @@ namespace Entidades
                 this.vueltasRestantes = value;
             }
         }
+        #endregion
 
-
-
+        #region Constructores
+        public AutoF1()
+        {
+            this.enCompetencia = false;
+            this.cantidadCombustible = 0;
+            this.vueltasRestantes = 0;
+        }
         public AutoF1(short numero, string escuderia)
         {
             this.numero = numero;
             this.escuderia = escuderia;
         }
+        #endregion
+
 
         public  string MostrarDatos()
         {
