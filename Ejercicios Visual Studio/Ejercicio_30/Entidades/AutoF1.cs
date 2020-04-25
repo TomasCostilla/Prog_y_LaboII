@@ -77,6 +77,15 @@ namespace Entidades
             datos.AppendLine("Vueltas Restantes: " + this.vueltasRestantes);
             return datos.ToString();
         }
+        
+        public static bool operator !=(AutoF1 a1,AutoF1 a2)
+        {
+            return !(a1 == a2);
+        }
+        public static bool operator ==(AutoF1 a1,AutoF1 a2)
+        {
+            return a1.numero == a2.numero && a1.escuderia == a2.escuderia;
+        }
 
 
 
