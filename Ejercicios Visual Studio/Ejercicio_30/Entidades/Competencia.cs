@@ -49,6 +49,7 @@ namespace Entidades
                     if(a==item)
                     {
                         //True
+                        contieneAuto = true;
                     }
                     else
                     {

@@ -76,7 +76,13 @@ namespace Entidades
         }
         public static bool operator ==(AutoF1 a1,AutoF1 a2)
         {
-            return a1.numero == a2.numero;// && a1.escuderia == a2.escuderia;
+            bool iguales = false;
+            if(a1.numero == a2.numero)
+            {
+                iguales = true;
+            }
+
+            return iguales;// && a1.escuderia == a2.escuderia;
         }
         
 
