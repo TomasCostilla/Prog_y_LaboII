@@ -27,9 +27,11 @@ namespace Entidades
             StringBuilder Comp = new StringBuilder();
             Comp.AppendLine("Cantidad de Competidores: " + this.cantidadCompetidores);
             Comp.AppendLine("Cantidad de Vueltas: " + this.cantidadVueltas);
-            Comp.AppendLine("Competidores: " + this.competidores);
             return Comp.ToString();
         }
+
+
+
 
         public static bool operator -(Competencia c,AutoF1 a)
         {
@@ -38,29 +40,26 @@ namespace Entidades
         public static bool operator +(Competencia c, AutoF1 a)
         {
             bool contieneAuto = false;
-  
-            if(c.competidores.Count < c.cantidadCompetidores)
+
+            if (c.competidores.Count < c.cantidadCompetidores)
             {
-                
+
                 foreach (AutoF1 item in c.competidores)
                 {
-                    if (a == item)
+                    if(a==item)
                     {
-                        contieneAuto = true;
-                      
+                        //True
                     }
                     else
                     {
+                        
                         c.competidores.Add(a);
-   
-                        /*a.SetEnCompetencia(true);
-                        a.SetVueltasRestantes(c.cantidadVueltas);
-                        Random num = new Random();
-                        a.SetCombustible((short)num.Next(15, 100));*/
-                        
+
+                        contieneAuto = false;
                     }
-                        
-                }
+
+                }      
+                
             }
             return contieneAuto;
         }
