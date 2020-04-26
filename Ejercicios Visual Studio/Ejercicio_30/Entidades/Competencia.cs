@@ -38,23 +38,25 @@ namespace Entidades
         public static bool operator +(Competencia c, AutoF1 a)
         {
             bool contieneAuto = false;
-
+  
             if(c.competidores.Count < c.cantidadCompetidores)
             {
+                
                 foreach (AutoF1 item in c.competidores)
                 {
                     if (a == item)
                     {
                         contieneAuto = true;
+                      
                     }
                     else
                     {
                         c.competidores.Add(a);
-                        a.EnCompetencia = true;
-                        a.Vueltas = c.cantidadVueltas;
-
+   
+                        /*a.SetEnCompetencia(true);
+                        a.SetVueltasRestantes(c.cantidadVueltas);
                         Random num = new Random();
-                        a.SetCombustible((short)num.Next(15, 100));
+                        a.SetCombustible((short)num.Next(15, 100));*/
                         
                     }
                         

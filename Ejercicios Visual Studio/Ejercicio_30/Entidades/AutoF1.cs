@@ -15,33 +15,36 @@ namespace Entidades
         private short vueltasRestantes;
 
 
-        #region Propiedades
-        public  short SetCombustible(short combustible)
+        #region GettersAndSetters
+
+        
+
+
+        public void SetCombustible(short combustible)
         {
-            return this.cantidadCombustible = combustible;
+            this.cantidadCombustible = combustible;
         }
-        public bool EnCompetencia
+        public short GetCombustible()
         {
-            get
-            {
-                return this.enCompetencia;
-            }
-            set
-            {
-                this.enCompetencia = value;
-            }
+            return this.cantidadCombustible;
         }
 
-        public short Vueltas
+        public void SetEnCompetencia(bool val)
         {
-            get
-            {
-                return this.vueltasRestantes;
-            }
-            set
-            {
-                this.vueltasRestantes = value;
-            }
+            this.enCompetencia = val;
+        }
+        public bool GetEnCompetencia()
+        {
+            return this.enCompetencia;
+        }
+
+        public void SetVueltasRestantes(short Vueltas)
+        {
+            this.vueltasRestantes = Vueltas;
+        }
+        public short GetVueltasRestantes()
+        {
+            return this.vueltasRestantes;
         }
         #endregion
 
@@ -63,11 +66,11 @@ namespace Entidades
         public  string MostrarDatos()
         {
             StringBuilder datos = new StringBuilder();
-            datos.AppendLine("Cantidad de combustible: " + this.cantidadCombustible);
-            datos.AppendLine("En Competencia: " + this.enCompetencia);
+            datos.AppendLine("Cantidad de combustible: " + this.GetCombustible());
+            datos.AppendLine("En Competencia: " + this.GetEnCompetencia());
             datos.AppendLine("Escuderia: " + this.escuderia);
             datos.AppendLine("Numero: " + this.numero);
-            datos.AppendLine("Vueltas Restantes: " + this.vueltasRestantes);
+            datos.AppendLine("Vueltas Restantes: " + this.GetVueltasRestantes());
             return datos.ToString();
         }
         
