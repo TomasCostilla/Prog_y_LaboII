@@ -16,12 +16,60 @@ namespace Entidades
         {
             this.competidores = new List<AutoF1>();
         }
-        public Competencia(short cantidadvueltas, short cantidadCompetidores)
+        public Competencia(short cantidadvueltas, short cantidadCompetidores) :this()
         {
             this.cantidadVueltas = cantidadvueltas;
             this.cantidadCompetidores = cantidadCompetidores;
         }
 
+        public  string MostrarDatos()
+        {
+            StringBuilder Comp = new StringBuilder();
+            Comp.AppendLine("Cantidad de Competidores: " + this.cantidadCompetidores);
+            Comp.AppendLine("Cantidad de Vueltas: " + this.cantidadVueltas);
+            Comp.AppendLine("Competidores: " + this.competidores);
+            return Comp.ToString();
+        }
+
+        public static bool operator -(Competencia c,AutoF1 a)
+        {
+            return c - a;
+        }
+        public static bool operator +(Competencia c, AutoF1 a)
+        {
+            bool contieneAuto = false;
+
+            if(c.competidores.Count < c.cantidadCompetidores)
+            {
+                foreach (AutoF1 item in c.competidores)
+                {
+                    if (a == item)
+                    {
+                        contieneAuto = true;
+                    }
+                    else
+                    {
+                        c.competidores.Add(a);
+                        a.EnCompetencia = true;
+                        a.Vueltas = c.cantidadVueltas;
+
+                        Random num = new Random();
+                        a.SetCombustible((short)num.Next(15, 100));
+                        
+                    }
+                        
+                }
+            }
+            return contieneAuto;
+        }
+        public static bool operator ==(Competencia c, AutoF1 a)
+        {
+            return c == a;
+        }
+        public static bool operator !=(Competencia c, AutoF1 a)
+        {
+            return !(c == a);
+        }
 
 
 

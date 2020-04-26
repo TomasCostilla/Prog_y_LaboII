@@ -16,9 +16,16 @@ namespace Entidades
 
 
         #region Propiedades
-        public  short SetCombustible(short combustible)
+        public short Combustible
         {
-            return this.cantidadCombustible = combustible;
+            get
+            {
+                return this.cantidadCombustible;
+            }
+            set
+            {
+                this.cantidadCombustible = value;
+            }
         }
         public bool EnCompetencia
         {
@@ -52,7 +59,7 @@ namespace Entidades
             this.cantidadCombustible = 0;
             this.vueltasRestantes = 0;
         }
-        public AutoF1(short numero, string escuderia) :this()
+        public AutoF1(short numero, string escuderia)
         {
             this.numero = numero;
             this.escuderia = escuderia;
