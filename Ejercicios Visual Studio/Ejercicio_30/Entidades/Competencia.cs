@@ -15,27 +15,28 @@ namespace Entidades
 
         private short cantidadCompetidores;
         private short cantidadVueltas;
-        private List<VehiculoDeCarrera> competidores;
+        private List<VehiculoDeCarrera> competidores = new List<VehiculoDeCarrera>();
         private TipoCompetencia tipo;
 
-        private Competencia()
-        {
-            this.competidores = new List<VehiculoDeCarrera>();
-        }
-        public Competencia(short cantidadvueltas, short cantidadCompetidores,TipoCompetencia tipo) :this()
+        //private Competencia()
+        //{
+        //    this.competidores = new List<VehiculoDeCarrera>();
+        //}
+        public Competencia(short cantidadvueltas, short cantidadCompetidores,TipoCompetencia tipo) //:this()
         {
             this.cantidadVueltas = cantidadvueltas;
             this.cantidadCompetidores = cantidadCompetidores;
             this.tipo = tipo;
         }
 
-        //public  string MostrarDatos()
-        //{
-        //    StringBuilder Comp = new StringBuilder();
-        //    Comp.AppendLine("Cantidad de Competidores: " + this.cantidadCompetidores);
-        //    Comp.AppendLine("Cantidad de Vueltas: " + this.cantidadVueltas);
-        //    return Comp.ToString();
-        //}
+        public  string MostrarDatos()
+        {
+            StringBuilder Comp = new StringBuilder();
+            Comp.AppendLine("Cantidad de Competidores: " + this.cantidadCompetidores);
+            Comp.AppendLine("Cantidad de Vueltas: " + this.cantidadVueltas);
+            Comp.AppendLine("Tipo de Competencia: " + this.tipo);
+            return Comp.ToString();
+        }
 
         public static bool operator -(Competencia c,VehiculoDeCarrera a)
         {
@@ -47,19 +48,13 @@ namespace Entidades
 
             if(c.tipo==TipoCompetencia.F1)
             {
-                if(c.competidores.Count < c.cantidadCompetidores)
+                if(c.competidores.Count < c.cantidadCompetidores && )
                 {
-                    foreach (VehiculoDeCarrera item in c.competidores)
+                   if (!(c.competidores.Contains(a)))
                     {
-                        if (a == item)
-                        {
-                            //Inserta es Falso
-                        }
-                        else
-                        {
-                            c.competidores.Add(a);
-                            inserta = true;
-                        }
+                        c.competidores.Add(a);
+                        inserta = true;
+                        c.competidores.Count();
                     }
                 }
             }
@@ -67,18 +62,11 @@ namespace Entidades
             {
                 if (c.competidores.Count < c.cantidadCompetidores)
                 {
-                    foreach (VehiculoDeCarrera item in c.competidores)
+                    if (!(c.competidores.Contains(a)))
                     {
-                        if (a == item)
-                        {
-                            //Inserta es Falso
-                        }
-                        else
-                        {
-                            c.competidores.Add(a);
-                            inserta = true;
-                        }
-                            
+                        c.competidores.Add(a);
+                        inserta = true;
+                        c.competidores.Count();
                     }
                 }
             }
