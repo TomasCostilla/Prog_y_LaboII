@@ -6,28 +6,26 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public enum Colores
+    public class Moto
     {
-        Rojo, Blanco, Azul, Gris, Negro
-    }
-    public class Automovil
-    {
+        
+        //public enum Colores
+        //{
+        //    Rojo, Blanco, Azul, Gris, Negro
+        //}
 
         public short cantidadRuedas;
         public short cantidadPuertas;
         public Colores color;
-        public short cantidadMarchas;
-        public int cantidadPasajeros;
+        public short cilindradas;
 
-        public Automovil(short cantRuedas,short cantPuertas,Colores val,short cantMarchas,int cantPasajeros)
+        public Moto(short cantRuedas,short cantPuertas, Colores val,short cilind)
         {
             this.cantidadRuedas = cantRuedas;
             this.cantidadPuertas = cantPuertas;
             this.color = val;
-            this.cantidadMarchas = cantMarchas;
-            this.cantidadPasajeros = cantPasajeros;
+            this.cilindradas = cilind;
         }
-
 
 
     }
