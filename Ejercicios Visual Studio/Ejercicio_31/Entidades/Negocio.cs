@@ -12,16 +12,29 @@ namespace Entidades
         private Queue<Cliente> clientes;
         private string nombre;
 
-        /*public Cliente cliente 
+        public Cliente ProxCliente 
         {
-            get 
+            /*get
             {
-                string resultado = this.clientes[];
-                return this.clientes[];
-            } 
-                      
-            set; 
-        }*/
+                return this.clientes.;
+            }*/
+            set
+            {
+                bool existe = false;
+                foreach (Cliente item in this.clientes)
+                {
+                    if (value == item)
+                    {
+                        existe = true;
+                    }
+                    else
+                    {
+                        this.clientes.Enqueue(value);
+                    }
+                        
+                }
+            }
+        }
 
         private Negocio()
         {
@@ -40,15 +53,39 @@ namespace Entidades
         }
         public static bool operator ==(Negocio n, Cliente c)
         {
-            return (n == c);
+            bool esta = false;
+            foreach (Cliente item in n.clientes)
+            {
+                if(c==item)
+                {
+                    esta = true;
+                }
+                else
+                {
+                    n.clientes.Enqueue(c);
+                }
+            }
+            return esta;
         }
-        public static bool operator ~(Negocio n)
+        public static  bool operator ~(Negocio n)
         {
+            
+            
             return false;
         }
         public static bool operator +(Negocio n, Cliente c)
         {
-            return n + c;
+            bool contieneCli = false;
+            foreach (Cliente item in n.clientes)
+            {
+                if (c == item)
+                {
+                    contieneCli = true;
+                }
+                else
+                    n.clientes.Enqueue(c);
+            }
+            return contieneCli;
         }
 
 
