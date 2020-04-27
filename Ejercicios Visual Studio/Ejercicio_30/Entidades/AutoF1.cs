@@ -6,69 +6,49 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class AutoF1
+    public class AutoF1 : VehiculoDeCarrera
     {
-        private short cantidadCombustible;
-        private bool enCompetencia;
-        private string escuderia;
-        private short numero;
-        private short vueltasRestantes;
+        private short caballosDeFuerza;
 
 
-        #region GettersAndSetters
-        public void SetCombustible(short combustible)
-        {
-            this.cantidadCombustible = combustible;
-        }
-        public short GetCombustible()
-        {
-            return this.cantidadCombustible;
-        }
-
-        public void SetEnCompetencia(bool val)
-        {
-            this.enCompetencia = val;
-        }
-        public bool GetEnCompetencia()
-        {
-            return this.enCompetencia;
-        }
-
-        public void SetVueltasRestantes(short Vueltas)
-        {
-            this.vueltasRestantes = Vueltas;
-        }
-        public short GetVueltasRestantes()
-        {
-            return this.vueltasRestantes;
+        #region Propiedades
+        public short CaballosDeFuerza 
+        { 
+            get
+            {
+                return this.caballosDeFuerza;
+            }
+            set
+            {
+                this.caballosDeFuerza = value;
+            }
         }
         #endregion
 
         #region Constructores
-        public AutoF1()
+        public AutoF1(short numero, string escuderia) 
+            :base(numero,escuderia)
         {
-            this.enCompetencia = false;
-            this.cantidadCombustible = 0;
-            this.vueltasRestantes = 0;
+            
         }
-        public AutoF1(short numero, string escuderia) :this()
+        public AutoF1(short numero,string escuderia,short caballosdeFuerza) 
+            :this(numero,escuderia)
         {
-            this.numero = numero;
-            this.escuderia = escuderia;
+            this.caballosDeFuerza = caballosdeFuerza;
         }
         #endregion
 
 
-        public  string MostrarDatos()
-        {
-            StringBuilder datos = new StringBuilder();
-            datos.AppendLine("Cantidad de combustible: " + this.GetCombustible());
-            datos.AppendLine("En Competencia: " + this.GetEnCompetencia());
-            datos.AppendLine("Escuderia: " + this.escuderia);
-            datos.AppendLine("Numero: " + this.numero);
-            datos.AppendLine("Vueltas Restantes: " + this.GetVueltasRestantes());
-            return datos.ToString();
-        }
+        //public  string MostrarDatos()
+        //{
+        //    StringBuilder datos = new StringBuilder();
+        //    datos.AppendLine("Cantidad de combustible: " + this.GetCombustible());
+        //    datos.AppendLine("En Competencia: " + this.GetEnCompetencia());
+        //    datos.AppendLine("Escuderia: " + this.escuderia);
+        //    datos.AppendLine("Numero: " + this.numero);
+        //    datos.AppendLine("Vueltas Restantes: " + this.GetVueltasRestantes());
+        //    return datos.ToString();
+        //}
         
         public static bool operator !=(AutoF1 a1,AutoF1 a2)
         {
@@ -77,7 +57,7 @@ namespace Entidades
         public static bool operator ==(AutoF1 a1,AutoF1 a2)
         {
             bool iguales = false;
-            if(a1.numero == a2.numero)
+            if(a1.CaballosDeFuerza == a2.CaballosDeFuerza && a1.Numero==a2.Numero && a1.Escuderia==a2.Escuderia)
             {
                 iguales = true;
             }
