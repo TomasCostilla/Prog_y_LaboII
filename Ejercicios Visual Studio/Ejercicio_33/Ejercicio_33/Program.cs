@@ -12,7 +12,10 @@ namespace Ejercicio_33
         static void Main(string[] args)
         {
             Libro Libro1 = new Libro();
-            
+
+            Libro1[0] = "Tomas";
+
+            Console.WriteLine(Libro1[0]);
 
 
         }

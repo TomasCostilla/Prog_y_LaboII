@@ -8,13 +8,13 @@ namespace Entidades
 {
     public class Libro
     {
-        private List<string> paginas; //= new List<string>();
+        private List<string> paginas = new List<string>();
 
 
-        public Libro()
+       /* public Libro()
         {
             this.paginas = new List<string>();
-        }
+        }*/
 
         public string this[int i]
         {
@@ -29,7 +29,7 @@ namespace Entidades
             }
             set 
             {
-                if(i>this.paginas.Count)
+                if(i>=this.paginas.Count-1)
                 {
                     this.paginas[i] = value;
                 }
