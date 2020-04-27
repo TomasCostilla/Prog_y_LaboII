@@ -14,8 +14,11 @@ namespace Clase_7
 
             Equipo Equip1 = new Equipo(10, "Boca");
 
+            DateTime fecha1 = new DateTime(2020, 04, 27);
+            DateTime fecha2 = new DateTime(2020, 04, 27);
 
-            //DirectorTecnico d1 = new DirectorTecnico();
+            DirectorTecnico d1 = new DirectorTecnico("tomas",fecha1);
+            DirectorTecnico d2 = new DirectorTecnico("tomas", fecha1);
 
             Jugador jug1 = new Jugador(123, "tomas", 21, 5);
             Jugador jug2 = new Jugador(234, "Pedro", 10, 6);
@@ -24,6 +27,12 @@ namespace Clase_7
             {
                 Console.WriteLine("El jugador 1 es una Persona");
             }
+
+            if(d1 == d2) //Dara True
+            {
+                Console.WriteLine("Iguales");
+            }
+            
 
 
           /*  if (Equip1 + jug1==false)
