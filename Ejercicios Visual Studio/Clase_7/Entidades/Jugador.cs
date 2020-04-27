@@ -7,31 +7,27 @@ using Entidades;
 
 namespace Entidades
 {
-    public class Jugador
+    public class Jugador : Persona
     {
-        private int dni;
-        private string nombre;
+        //private int dni;
+        //private string nombre;
         private int partidosJugados;
         //private float promedioGoles;
         private int totalGoles;
 
 
-        private Jugador()
+        private Jugador(int dni,string nombre) 
+            :base(dni,nombre)
         {
-            this.partidosJugados = 0;
-           // this.promedioGoles = 0;
-            this.totalGoles = 0;
+        
         }
-        public Jugador(int dni, string nombre) :this()
-        {
-            this.dni = dni;
-            this.nombre = nombre;
-        }
-        public Jugador(int dni, string nombre, int totalGoles, int totalPartidos) : this(dni, nombre)
+        public Jugador(int dni, string nombre,int totalGoles,int totalPart) 
+            :this(dni,nombre)
         {
             this.totalGoles = totalGoles;
-            this.partidosJugados = totalPartidos;
+            this.partidosJugados = totalPart;
         }
+        
 
         #region Propiedades
         public int partidosJug
@@ -40,13 +36,20 @@ namespace Entidades
             {
                 return this.partidosJugados;
             }
+            set
+            {
+                this.partidosJugados = value;
+            }
         }
-
         public int TotalGoles
         {
             get
             {
                 return this.totalGoles;
+            }
+            set
+            {
+                this.totalGoles = value;
             }
 
         }
@@ -67,61 +70,24 @@ namespace Entidades
                 return PromedioGoles;
             }
         }
-
-        public int PropDni
-        {
-            get
-            {
-                return this.dni;
-            }
-            set
-            {
-                this.dni = value;
-            }
-        }
-
-        public string PropNom
-        {
-            get
-            {
-                return this.nombre;
-            }
-            set
-            {
-                this.nombre = value;
-            }
-
-        }
         #endregion
 
+        //public string MostrarDatos()
+        //{
+        //    //StringBuilder texto = new StringBuilder();
+        //    ////texto.AppendLine("Dni: "+this.dni);
+        //    //texto.AppendLine("Dni: " + PropDni);
+        //    ////texto.AppendLine("Nombre: " + this.nombre);
+        //    //texto.AppendLine("Nombre: " + PropNom);
+        //    ////texto.AppendLine("Partidos Jugados: " + this.partidosJugados);
+        //    //texto.AppendLine("Partidos Jugados: " + partidosJug);
+        //    ////texto.AppendLine("Promedio de Goles: " + this.GetPromedioGoles());
+        //    //texto.AppendLine("Promedio de Goles: " + PromedioG);
+        //    ////texto.AppendLine("Total de Goles: " + this.totalGoles);
+        //    //texto.AppendLine("Total de Goles: " + TotalGoles);
+        //    //return texto.ToString();
 
-
-        /*public float GetPromedioGoles()
-        {
-            if(this.partidosJugados==0)
-            {
-                this.promedioGoles = 0;
-            }
-            else
-                this.promedioGoles = this.totalGoles / this.partidosJugados
-;
-            return this.promedioGoles;
-        }*/
-        public string MostrarDatos()
-        {
-            StringBuilder texto = new StringBuilder();
-            //texto.AppendLine("Dni: "+this.dni);
-            texto.AppendLine("Dni: " + PropDni);
-            //texto.AppendLine("Nombre: " + this.nombre);
-            texto.AppendLine("Nombre: " + PropNom);
-            //texto.AppendLine("Partidos Jugados: " + this.partidosJugados);
-            texto.AppendLine("Partidos Jugados: " + partidosJug);
-            //texto.AppendLine("Promedio de Goles: " + this.GetPromedioGoles());
-            texto.AppendLine("Promedio de Goles: " + PromedioG);
-            //texto.AppendLine("Total de Goles: " + this.totalGoles);
-            texto.AppendLine("Total de Goles: " + TotalGoles);
-            return texto.ToString();
-        }
+        //}
 
         public static bool operator !=(Jugador j1,Jugador j2)
         {
@@ -129,7 +95,7 @@ namespace Entidades
         }
         public static bool operator ==(Jugador j1,Jugador j2)
         {
-            return j1.dni == j2.dni;
+            return j1.Dni == j2.Dni;
         }
 
 

@@ -13,13 +13,18 @@ namespace Clase_7
         {
 
             Equipo Equip1 = new Equipo(10, "Boca");
-            Jugador jug1 = new Jugador(123, "Carlos");
-            Jugador jug2 = new Jugador(234, "pepe", 10, 2);
 
 
+            //DirectorTecnico d1 = new DirectorTecnico();
 
-            Console.WriteLine("jugador: "+jug1.MostrarDatos());
-            Console.WriteLine("jugador: " + jug2.MostrarDatos());
+            Jugador jug1 = new Jugador(123, "tomas", 21, 5);
+            Jugador jug2 = new Jugador(234, "Pedro", 10, 6);
+
+            if(jug1 is Persona)
+            {
+                Console.WriteLine("El jugador 1 es una Persona");
+            }
+
 
           /*  if (Equip1 + jug1==false)
             {
