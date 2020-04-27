@@ -48,7 +48,7 @@ namespace Entidades
 
             if(c.tipo==TipoCompetencia.F1)
             {
-                if(c.competidores.Count < c.cantidadCompetidores && )
+                if(c.competidores.Count < c.cantidadCompetidores)
                 {
                    if (!(c.competidores.Contains(a)))
                     {
