@@ -103,6 +103,11 @@ namespace CentralitaHerencia
             return retorno;
         }
 
+        public void OrdenarLlamadas()
+        {
+            this.listadeLlamadas.Sort(Llamada.OrdenarporDuracion);
+        }
+
 
     }
 }
