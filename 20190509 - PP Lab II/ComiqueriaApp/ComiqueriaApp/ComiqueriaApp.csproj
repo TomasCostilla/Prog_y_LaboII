@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VentasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasForm.Designer.cs">
+      <DependentUpon>VentasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrincipalForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VentasForm.resx">
+      <DependentUpon>VentasForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +87,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComiqueriaLogic\ComiqueriaLogic.csproj">
+      <Project>{9937e6f9-613a-4cae-8285-acf5263c9196}</Project>
+      <Name>ComiqueriaLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
