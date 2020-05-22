@@ -19,18 +19,18 @@ namespace Exepciones
                 int y = int.Parse(Console.ReadLine());
                 int k = x / y;
             }
-			catch (FormatException e)
+			catch (Exception e)
 			{
                 Console.WriteLine(e.Message);
 			}
-            catch (DivideByZeroException e)
+            /*catch (DivideByZeroException e)
             {
                 Console.WriteLine(e.Message);
             }
             catch (OverflowException e)
             {
                 Console.WriteLine(e.Message);
-            }
+            }*/
 
 
 
