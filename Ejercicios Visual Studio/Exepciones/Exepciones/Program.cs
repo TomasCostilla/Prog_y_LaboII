@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,28 +12,33 @@ namespace Exepciones
     {
         static void Main(string[] args)
         {
-
-			try
+            int x;
+            int y;
+            int k;
+            try
 			{
                 Console.WriteLine("Escriba un numero: ");
-                int x = int.Parse(Console.ReadLine());
+                x = int.Parse(Console.ReadLine());
                 Console.WriteLine("Escriba un numero: ");
-                int y = int.Parse(Console.ReadLine());
-                int k = x / y;
+                y = int.Parse(Console.ReadLine());
+                k = x / y;
             }
-			catch (Exception e)
-			{
-                Console.WriteLine(e.Message);
-			}
-            /*catch (DivideByZeroException e)
+            catch (DivideByZeroException e)
             {
                 Console.WriteLine(e.Message);
             }
             catch (OverflowException e)
             {
                 Console.WriteLine(e.Message);
-            }*/
-
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Pulse para continuar...");
+            }
 
 
         }
