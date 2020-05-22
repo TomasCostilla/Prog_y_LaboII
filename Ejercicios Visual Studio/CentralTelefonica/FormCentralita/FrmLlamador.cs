@@ -21,6 +21,15 @@ namespace FormCentralita
             InitializeComponent();
         }
 
+        public TipoLlamada TpoLlamada 
+        { 
+           set
+            {
+                this.tp = value;
+            }
+        }
+
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -103,11 +112,12 @@ namespace FormCentralita
             if(n!="#")
             {
                 txtNroDestino.Text += n;
+                this.TpoLlamada = TipoLlamada.Local;
             }
             else
             {
                 this.primerNumero = "#";
-                this.tp = TipoLlamada.Provincial;
+                this.TpoLlamada = TipoLlamada.Provincial;
                 txtNroDestino.Text += n;
             }
                 
@@ -119,6 +129,38 @@ namespace FormCentralita
 
             Franja franjas;
             Enum.TryParse<Franja>(cmbFranja.SelectedValue.ToString(), out franjas);
+        }
+
+        private void btnLlamar_Click(object sender, EventArgs e)
+        {
+           if(tp==TipoLlamada.Local)
+            {
+                Random dur = new Random();
+                Random cost = new Random();
+                float RandomDuracion = dur.Next(1, 50);
+                float costo1 = (float)0.5;
+                float costo2 = (float)5.6;
+                float costo = cost.Next((int)costo1,(int)costo2);
+
+                Local l1 = new Local(txtNroOrigen.Text, RandomDuracion, txtNroDestino.Text, costo);
+            }
+           else
+            {
+                Random dur = new Random();
+                Random cost = new Random();
+                float RandomDuracion = dur.Next(1, 50);
+                float costo1 = (float)0.5;
+                float costo2 = (float)5.6;
+                float costo = cost.Next((int)costo1, (int)costo2);
+                Provincial l1 = new Provincial(txtNroOrigen.Text, Franja.Franja_1, RandomDuracion, txtNroDestino.Text);
+            }
+
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
