@@ -143,6 +143,8 @@ namespace FormCentralita
                 float costo = cost.Next((int)costo1,(int)costo2);
 
                 Local l1 = new Local(txtNroOrigen.Text, RandomDuracion, txtNroDestino.Text, costo);
+
+                MessageBox.Show(l1.ToString());
             }
            else
             {
@@ -155,6 +157,7 @@ namespace FormCentralita
                 Provincial l1 = new Provincial(txtNroOrigen.Text, Franja.Franja_1, RandomDuracion, txtNroDestino.Text);
             }
 
+            
 
         }
 
