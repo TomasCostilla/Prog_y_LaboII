@@ -54,7 +54,7 @@ namespace CentralitaHerencia
         }
 
 
-        public string Mostrar()
+        private string Mostrar()
         {
             StringBuilder texto = new StringBuilder();
             texto.AppendLine("Razon Social: " + this.razonSocial);
@@ -63,7 +63,7 @@ namespace CentralitaHerencia
             texto.AppendLine("Ganancia Provincial: " + this.GananciasPorProvincial);
             foreach (Llamada item in this.listadeLlamadas)
             {
-                texto.AppendLine(item.Mostrar());
+                texto.AppendLine(item.ToString());
             }
             return texto.ToString();
         }
@@ -108,6 +108,43 @@ namespace CentralitaHerencia
             this.listadeLlamadas.Sort(Llamada.OrdenarporDuracion);
         }
 
+        public override string ToString()
+        {
+            return Mostrar();
+        }
+
+        private void AgregarLlamada(Llamada nuevaLlamada)
+        {
+            this.listadeLlamadas.Add(nuevaLlamada);
+        }
+        public static bool operator ==(Centralita c,Llamada llamada)
+        {
+            bool existe = false;
+            foreach (Llamada item in c.listadeLlamadas)
+            {
+                if(item==llamada)
+                {
+                    existe = true;
+                }
+            }
+            return existe;
+        }
+        public static bool operator !=(Centralita c, Llamada llamada)
+        {
+            return !(c == llamada);
+        }
+        public static Centralita operator +(Centralita c, Llamada nuevallamada)
+        {
+            //bool existe = false;
+            if(c==nuevallamada)
+            {
+                //No agrega
+            }
+            else
+                c.AgregarLlamada(nuevallamada);
+            
+            return c;
+        }
 
     }
 }

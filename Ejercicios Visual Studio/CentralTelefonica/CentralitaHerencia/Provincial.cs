@@ -25,7 +25,7 @@ namespace CentralitaHerencia
         }
 
 
-        public float CostoLlamada 
+        public override float CostoLlamada 
         { 
             get
             {
@@ -52,7 +52,7 @@ namespace CentralitaHerencia
             return retorno;
         }
 
-        public string Mostrar()
+        protected override string Mostrar()
         {
             StringBuilder texto = new StringBuilder();
 
@@ -60,6 +60,21 @@ namespace CentralitaHerencia
             texto.AppendLine("Costo llamada: " + CostoLlamada);
             texto.AppendLine("Franja Horaria: " + this.franjaHoraria);
             return texto.ToString();
+        }
+
+        public override string ToString()
+        {
+            return Mostrar();
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
+            if(obj is Provincial)
+            {
+                retorno = true;
+            }
+            return retorno;
         }
 
 

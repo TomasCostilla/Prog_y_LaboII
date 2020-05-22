@@ -20,7 +20,7 @@ namespace CentralitaHerencia
             this.costo = costo;
         }
 
-        public float CostoLlamada 
+        public override float CostoLlamada 
         { 
             get
             {
@@ -28,7 +28,7 @@ namespace CentralitaHerencia
             }
         }
 
-        public string Mostrar()
+        protected override string Mostrar()
         {
             StringBuilder texto = new StringBuilder();
 
@@ -42,6 +42,20 @@ namespace CentralitaHerencia
             return this.costo * this.Duracion;
         }
 
+        public override string ToString()
+        {
+            return Mostrar();
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
+            if(obj is Local)
+            {
+                retorno = true;
+            }
+            return retorno;
+        }
 
     }
 }

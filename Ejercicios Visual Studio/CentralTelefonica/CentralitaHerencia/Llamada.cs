@@ -12,7 +12,7 @@ namespace CentralitaHerencia
         Provincial,
         Todas
     }
-    public class Llamada
+    public abstract class Llamada
     {
 
         protected float duracion;
@@ -20,6 +20,12 @@ namespace CentralitaHerencia
         protected string nroOrigen;
 
         #region Propiedades
+
+        /// <summary>
+        /// Propiedad Abstracta
+        /// </summary>
+        public abstract float CostoLlamada { get; }
+        
         public float Duracion 
         { 
             get
@@ -51,7 +57,7 @@ namespace CentralitaHerencia
             this.nroOrigen = nroOrigen;
         }
 
-        public string Mostrar()
+        protected virtual string Mostrar()
         {
             StringBuilder texto = new StringBuilder();
             texto.AppendLine("Duracion: " + Duracion);
@@ -66,6 +72,23 @@ namespace CentralitaHerencia
                 return 1;
             else
                 return -1;
+        }
+
+        public static bool operator !=(Llamada l1, Llamada l2)
+        {
+            bool retorno = false;
+            if (!(l1.Equals(l2)) && l1.NroDestino != l2.NroDestino && l1.NroOrigen != l2.NroOrigen)
+                retorno = true;
+
+            return retorno;
+        }
+        public static bool operator ==(Llamada l1,Llamada l2)
+        {
+            bool retorno = false;
+            if ((l1.Equals(l2)) && l1.NroDestino == l2.NroDestino && l1.NroOrigen == l2.NroOrigen)
+                retorno = true;
+
+            return retorno;
         }
 
 
