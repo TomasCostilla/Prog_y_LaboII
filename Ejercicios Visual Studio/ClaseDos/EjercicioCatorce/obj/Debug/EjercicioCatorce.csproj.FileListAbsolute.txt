@@ -1,7 +1,0 @@
-C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioCatorce\bin\Debug\EjercicioCatorce.exe.config
-C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioCatorce\bin\Debug\EjercicioCatorce.exe
-C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioCatorce\bin\Debug\EjercicioCatorce.pdb
-C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioCatorce\obj\Debug\EjercicioCatorce.csprojAssemblyReference.cache
-C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioCatorce\obj\Debug\EjercicioCatorce.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioCatorce\obj\Debug\EjercicioCatorce.exe
-C:\Users\Usuario\Desktop\C#\Prog_y_LaboII\Ejercicios Visual Studio\ClaseDos\EjercicioCatorce\obj\Debug\EjercicioCatorce.pdb

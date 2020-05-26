@@ -1,6 +1,0 @@
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioDos\bin\Debug\EjercicioDos.exe.config
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioDos\bin\Debug\EjercicioDos.exe
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioDos\bin\Debug\EjercicioDos.pdb
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioDos\obj\Debug\EjercicioDos.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioDos\obj\Debug\EjercicioDos.exe
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioDos\obj\Debug\EjercicioDos.pdb

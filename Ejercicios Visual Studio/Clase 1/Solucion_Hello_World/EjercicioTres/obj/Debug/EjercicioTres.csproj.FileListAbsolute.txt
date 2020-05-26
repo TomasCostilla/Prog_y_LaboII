@@ -1,7 +1,0 @@
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioTres\bin\Debug\EjercicioTres.exe.config
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioTres\bin\Debug\EjercicioTres.exe
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioTres\bin\Debug\EjercicioTres.pdb
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioTres\obj\Debug\EjercicioTres.csprojAssemblyReference.cache
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioTres\obj\Debug\EjercicioTres.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioTres\obj\Debug\EjercicioTres.exe
-C:\Users\Usuario\Desktop\C#\Ejercicios Visual Studio\Clase 1\Solucion_Hello_World\EjercicioTres\obj\Debug\EjercicioTres.pdb
